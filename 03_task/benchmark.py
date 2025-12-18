@@ -34,12 +34,13 @@ def run_benchmark():
     main_str_1 = (script_dir / "testdata/article_1.txt").read_text(encoding="utf-8")
     print("Run benchmark for article 1")
     run_benchmark_for_main_str(main_str_1, [
-        ("existing", "за номіналом монети"),  # existing pattern
-        ("non-existent", "номінал монети який не існує")  # non-existing pattern
+        ("existing", "Java"),
+        ("non-existent", "private"),
     ])
-    print("\n\nRun benchmark for article 1")
+    print("\n\nRun benchmark for article 2")
     main_str_2 = (script_dir / "testdata/article_2.txt").read_text(encoding="utf-8")
     run_benchmark_for_main_str(main_str_2, [
-        ("existing", "максимальна кількість вподобань 1536"),  # existing pattern
-        ("non-existent", "максимальна кількість вподобань 1231232")  # non-existing pattern
+        ("existing", "розташовується"),  # existing pattern
+        ("existing long pattern", "максимальна кількість вподобань 2048"),
+        ("non-existent", "конвертація")  # non-existing pattern
     ])
